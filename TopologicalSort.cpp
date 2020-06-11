@@ -13,10 +13,9 @@ vector < vector<int> > adj;
 queue<int> q;
 vector<int> ordem;
 int na,nv;
-set<int> s;
 
 void toposort(){
-	for(int i=1; i<=nv; i++) if(dependencias[i] == 0 && s.find(i) != s.end()) q.push(i);
+	for(int i=1; i<=nv; i++) if(dependencias[i] == 0) q.push(i);
 	while(!q.empty()){
 		int curr = q.front();
 		q.pop();
@@ -39,7 +38,6 @@ void solve(){
 	while(na--){
 		cin >> a >> b; // a depende de b;
 		adj[b].pb(a);
-		s.insert(a); s.insert(b);
 		dependencias[a]++;
 	}
 	toposort();

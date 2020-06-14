@@ -26,7 +26,7 @@ void join(int x,int y){
 	pai[find(x)] = find(y);
 }
 
-void solve{}
+void solve(){}
 
 int main(){
 	ios::sync_with_stdio(0);

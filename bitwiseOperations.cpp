@@ -31,7 +31,7 @@ void solve(){
   // AND operation to clean the j-th element.
   n = 42;         //(101010)
   j=1; // !(1 << j) (111101)
-  n &= !(1<< j);  //(101000)
+  n &= ~(1<< j);  //(101000)
   
   // XOR operation to toggle the j-th item of the set
   n = 40;         //(101000)
@@ -40,7 +40,7 @@ void solve(){
   
   // AND operation to get the last significant digit/
   n = 40;
-  t = (n & (!n));
+  t = (n & (~n));
   //in this case, the last significant digit is on 3-th position.
 }
 

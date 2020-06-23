@@ -31,7 +31,7 @@ void solve(){
   // AND operation to clean the j-th element.
   n = 42;         //(101010)
   j=1; // !(1 << j) (111101)
-  n &= !(1<< j);    (101000)
+  n &= !(1<< j);  //(101000)
   
   // XOR operation to toggle the j-th item of the set
   n = 40;         //(101000)

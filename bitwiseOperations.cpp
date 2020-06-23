@@ -40,7 +40,7 @@ void solve(){
   
   // AND operation to get the last significant digit/
   n = 40;
-  t = (n & (~n));
+  t = (n & (-n));
   //in this case, the last significant digit is on 3-th position.
 }
 

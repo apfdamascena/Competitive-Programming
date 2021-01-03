@@ -18,7 +18,7 @@ vector<bool> eratostenes(int n){
 	
 	for(int i=2; i<=n; i++){
 		if(primos[i] && (ll)i*i<=n){
-			for(int j=i*i; j<=n; j++){
+			for(int j=i*i; j<=n; j+=i){
 				primos[j] = false;
 			}
 		}
@@ -31,7 +31,7 @@ vector<bool> eratostenes(int n){
 	primos[0] = primos[1] = false;
 	
 	for(int i=2; i*i <= n; i++){
-		if(primo[i]){
+		if(primos[i]){
 			for(int j=2; i*j <= n; j++){
 				primos[i*j] = false;
 			}
